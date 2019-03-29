@@ -1,0 +1,16 @@
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer{
+            repository(
+                    url: uri('../repository')
+            )
+            pom.project{
+                groupId  'com.zxo'
+                artifactId  'lifecycle-plugin'
+                version  '0.0.4'
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.zxo.gradle'
+//apply plugin: 'com.zxo.gradle.lifecycle'
+apply plugin: com.zxo.second.SecondPlugin
+
+//apply plugin: 'com.gavin.gradle'
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.zxo.testgradle"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+}
+
+
+
+
+

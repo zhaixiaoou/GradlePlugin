@@ -1,0 +1,18 @@
+apply plugin: 'groovy'
+apply from: './maven.gradle'
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    //gradle sdk
+    compile gradleApi()
+    //groovy sdk
+    compile localGroovy()
+
+}
+
+
+
+
